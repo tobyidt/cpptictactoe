@@ -18,6 +18,8 @@ int main()
   int turn =0;
 
   bool gameOver = false;
+  int rowIn;
+  int collIn;
 
   std::cout<<"welcome to the game!" <<std::endl;
 
@@ -35,7 +37,19 @@ int main()
     }
 
     // do the turn
+      std::cout << "pick a Row: ";
+      std::cin>>rowIn;
+      std::cout<<"Pick a Collum: ";
+      std::cin>>collIn;
 
+      if(turn == 0)
+      {board[rowIn][collIn] = 'x';
+
+      }
+      else
+      {board[rowIn][collIn] = 'o';
+
+      }
     turn++;
     turn%= 2;
   }
